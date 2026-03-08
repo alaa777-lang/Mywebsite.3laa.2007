@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=1000">
+
+  <title>علاء - مصمم ومطور | سوريا</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="علاء، مطور ومحرر فيديوهات من سوريا، متخصص في تطوير الألعاب (لعبة فزورة) ومونتاج الفيديوهات (12k متابع على تيك توك) وتصميم الفوتوشوب. شاهد أعمالي وتواصل معي.">
+    <meta name="keywords" content="علاء, مطور, محرر, سوريا, العاب, فزورة, تيك توك, مونتاج, فوتوشوب">
+    <meta name="author" content="علاء">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="علاء - مطور ومحرر فيديوهات">
+    <meta property="og:description" content="مطور ألعاب ومحرر فيديوهات من سوريا.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alaa.dev">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/4f46e5/ffffff?text=Alaa">
+    <meta property="og:locale" content="ar_AR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="علاء - مطور ومحرر فيديوهات">
+    <meta name="twitter:description" content="مطور ألعاب ومحرر فيديوهات من سوريا.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/4f46e5/ffffff?text=Alaa">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%234f46e5' /%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='Arial'%3Eع%3C/text%3E%3C/svg%3E">
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Fontawesome (async) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    
+    <!-- AOS (async) -->
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #312e81;
+            --accent: #f97316;
+            --accent-dark: #b45309;
+            --bg-dark: #0a0f1e;
+            --text-dark: #f0f9ff;
+            --bg-light: #f8fafc;
+            --text-light: #0f172a;
+            --card-bg-dark: rgba(255,255,255,0.02);
+            --card-bg-light: #ffffff;
+            --border-dark: rgba(255,255,255,0.05);
+            --border-light: #e2e8f0;
+            --shadow-color: #4f46e5;
+        }
+body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-dark);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+    scroll-behavior: smooth;
+}
+
+body.light-mode {
+    background: var(--bg-light);
+    color: var(--text-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* شريط التنقل الثابت */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 15, 30, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-dark);
+    flex-wrap: wrap;
+    gap: 15px;
+    transition: background 0.3s;
+}
+
+body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom-color: var(--border-light);
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #38bdf8, #8b5cf6, #d946ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* شريط تقدم القراءة */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(to left, var(--accent), var(--primary));
+    z-index: 1001;
+    transition: width 0.1s;
+}
+
+/* قسم البطل */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #38bdf8, #8b5cf6, #d946ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+body.light-mode .hero-content p {
+    color: #334155;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 280px;
+    background: var(--card-bg-dark);
+    border-radius: 70px;
+    padding: 30px;
+    border: 3px solid var(--primary);
+    box-shadow: 0 20px 40px -10px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+body.light-mode .hero-image {
+    background: var(--card-bg-light);
+    border-color: var(--primary);
+}
+
+.hero-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    object-fit: cover;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #f97316, #fb923c, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge {
+    background: var(--primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+/* أزرار */
+.btn-primary {
+    background: linear-gradient(145deg, var(--primary), #6366f1);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 60px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 8px 0 var(--primary-dark), 0 8px 25px var(--primary);
+    cursor: pointer;
+    transition: 0.15s;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 13px 0 var(--primary-dark), 0 15px 40px var(--primary);
+}
+
+.btn-primary:active {
+    transform: translateY(5px);
+    box-shadow: 0 3px 0 var(--primary-dark);
+}
+
+/* العناوين */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 70px 0 40px;
+    background: linear-gradient(135deg, #38bdf8, #8b5cf6, #d946ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* بطاقات الخبرات */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background: var(--card-bg-dark);
+    border: 2px solid var(--border-dark);
+    border-radius: 50px;
+    padding: 30px 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    text-align: center;
+}
+
+body.light-mode .feature-card {
+    background: var(--card-bg-light);
+    border-color: var(--border-light);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 30px -10px var(--accent);
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+/* شبكة المشاريع */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.project-card {
+    background: var(--card-bg-dark);
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    padding: 25px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+body.light-mode .project-card {
+    background: var(--card-bg-light);
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -10px var(--accent);
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.project-link {
+    display: inline-block;
+    background: var(--primary);
+    padding: 8px 25px;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.project-link:hover {
+    background: var(--accent);
+}
+
+/* المهارات مع أشرطة التقدم */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skill-name {
+    width: 120px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.skill-bar {
+    flex: 1;
+    height: 20px;
+    background: #1e293b;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+}
+
+body.light-mode .skill-bar {
+    background: #e2e8f0;
+}
+
+.skill-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to left, var(--accent), var(--primary));
+    border-radius: 30px;
+    transition: width 1s ease-in-out;
+}
+/* الإنجازات مع عداد */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.achievement-item {
+    background: var(--card-bg-dark);
+    border: 2px solid var(--accent);
+    border-radius: 60px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.3rem;
+}
+
+body.light-mode .achievement-item {
+    background: var(--card-bg-light);
+}
+
+.achievement-item i {
+    color: var(--accent);
+    font-size: 2.5rem;
+}
+
+.counter {
+    font-weight: 900;
+    color: var(--accent);
+    margin-left: 5px;
+}
+
+/* روابط التواصل */
+.social-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.social-link {
+    padding: 15px 35px;
+    border-radius: 60px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.2s;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.social-link.instagram {
+    background: radial-gradient(circle at 30% 30%, #f09433, #d62976, #962fbf);
+}
+
+.social-link.tiktok {
+    background: #010101;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px -5px black;
+}
+
+/* نموذج تواصل */
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    background: var(--card-bg-dark);
+    padding: 40px;
+    border-radius: 50px;
+    border: 2px solid var(--primary);
+}
+
+body.light-mode .contact-form {
+    background: var(--card-bg-light);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--border-dark);
+    border-radius: 30px;
+    background: transparent;
+    color: inherit;
+    font-size: 1.1rem;
+    font-family: inherit;
+}
+
+body.light-mode input,
+body.light-mode textarea {
+    border-color: var(--border-light);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 60px;
+    background: linear-gradient(145deg, var(--primary), #6366f1);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 0 var(--primary-dark);
+    transition: 0.15s;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 var(--primary-dark);
+}
+
+/* البريد */
+.email-container {
+    text-align: center;
+    margin: 30px auto;
+    background: var(--card-bg-dark);
+    padding: 20px;
+    border-radius: 60px;
+    max-width: 600px;
+    border: 1px solid var(--primary);
+}
+
+body.light-mode .email-container {
+    background: var(--card-bg-light);
+}
+
+/* تذييل */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #94a3b8;
+    border-top: 1px solid var(--border-dark);
+    margin-top: 60px;
+}
+
+.footer i {
+    color: var(--accent);
+}
+
+/* زر العودة للأعلى */
+#scrollToTop {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 4px 10px black;
+    transition: 0.2s;
+}
+
+#scrollToTop:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+        /* زر تبديل الوضع */
+        .theme-switch {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 999;
+            border: 1px solid var(--accent);
+            box-shadow: 0 5px 15px black;
+        }
+
+        /* خلفية متحركة خفيفة */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+            background: radial-gradient(circle at 20% 30%, var(--primary), transparent 30%),
+                        radial-gradient(circle at 80% 70%, var(--accent), transparent 30%);
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.2) rotate(5deg); }
+        }
+
+        /* دوسية الطباعة */
+        @media print {
+            .navbar, .theme-switch, #scrollToTop, .contact-form, .animated-bg, .progress-bar {
+                display: none;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+        }
+        /* تنسيق خاص بلعبة فزورة - مميزة */
+        .featured-project {
+            background: linear-gradient(145deg, rgba(79, 70, 229, 0.15), rgba(249, 115, 22, 0.15));
+            border: 3px solid var(--accent);
+            border-radius: 70px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 30px 40px -15px var(--accent);
+            transition: transform 0.3s;
+        }
+
+        .featured-project:hover {
+            transform: translateY(-5px);
+        }
+
+        .featured-project .project-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .featured-project .project-desc {
+            font-size: 1.4rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .features-list li {
+            list-style: none;
+            background: rgba(255,255,255,0.05);
+            padding: 15px 25px;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list i {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .featured-project .btn-primary {
+            font-size: 1.8rem;
+            padding: 15px 50px;
+            display: inline-block;
+            margin: 20px auto 0;
+            width: fit-content;
+        }
+        /* تحسينات للهواتف */
+        @media (max-width: 600px) {
+            .game-container {
+                padding: 16px;
+                border-radius: 32px;
+            }
+            
+            .big-letter {
+                font-size: 5rem;
+            }
+            
+            .btn {
+                font-size: 1.2rem;
+                padding: 12px 24px;
+            }
+            
+            .btn-small {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+            
+            #questionText {
+                font-size: 1.4rem !important;
+            }
+            
+            .grid-5x5 {
+                gap: 6px;
+            }
+            
+            .grid-cell {
+                font-size: 1.8rem !important;
+            }
+            
+            #teamsHeader .btn-small {
+                font-size: 0.9rem !important;
+                padding: 6px 8px !important;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .big-letter {
+                font-size: 4rem;
+            }
+            
+            .grid-cell {
+                font-size: 1.4rem !important;
+            }
+            
+            #answerInput {
+                font-size: 1.1rem !important;
+                padding: 10px !important;
+            }
+        }
+
+        /* نافذة اختيار اللغة */
+        .lang-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+        }
+        .lang-modal.closed {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .lang-card {
+            background: var(--bg-dark);
+            border: 3px solid var(--primary);
+            border-radius: 70px;
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 30px 50px var(--shadow-color);
+        }
+        body.light-mode .lang-card {
+            background: var(--bg-light);
+        }
+        .lang-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #38bdf8, #8b5cf6, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .lang-card p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #cbd5e1;
+        }
+        .lang-options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .lang-btn {
+            padding: 15px 40px;
+            border-radius: 60px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: 2px solid var(--accent);
+            transition: 0.2s;
+            background: linear-gradient(145deg, var(--primary), #6366f1);
+            color: white;
+            box-shadow: 0 8px 0 var(--primary-dark);
+            flex: 0 1 auto;
+            min-width: 150px;
+        }
+        .lang-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 13px 0 var(--primary-dark);
+        }
+        .lang-btn:active {
+            transform: translateY(5px);
+            box-shadow: 0 3px 0 var(--primary-dark);
+        }
+/* زر تغيير اللغة في الشريط */
+.lang-switch-btn {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px var(--accent);
+}
+.lang-switch-btn:hover {
+    transform: scale(1.1);
+    background: var(--accent);
+    color: white;
+}
+body.light-mode .lang-switch-btn {
+    color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+        /* ... الأكواد السابقة ... */
+
+        @media print {
+            .navbar, .theme-switch, #scrollToTop, .contact-form, .animated-bg, .progress-bar {
+                display: none;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+        }
+
+        /* ضع الكود الجديد هنا مباشرة قبل إغلاق الـ style */
+        @media (max-width: 768px) {
+            /* الكود الجديد الذي أرسلته لك */
+        }
+
+    </style> </head>
+
+    </style>
+</head>
+<body>
+    <!-- خلفية متحركة -->
+    <div class="animated-bg"></div>
+
+    <!-- شريط تقدم القراءة -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- زر العودة للأعلى -->
+    <button id="scrollToTop" title="العودة للأعلى" aria-label="العودة للأعلى">↑</button>
+
+    <!-- زر تبديل الوضع -->
+    <div class="theme-switch" onclick="document.body.classList.toggle('light-mode')" role="button" tabindex="0" aria-label="تبديل الوضع النهاري/الليلي">
+        <i class="fas fa-adjust"></i> <span id="themeText">الوضع النهاري / الليلي</span>
+    </div>
+
+    <!-- نافذة اختيار اللغة (مخفية افتراضياً) -->
+    <div id="langModal" class="lang-modal closed">
+        <div class="lang-card">
+            <h2 id="modalTitle">🌐 اختر اللغة</h2>
+            <p id="modalDesc">الرجاء اختيار اللغة المناسبة لك</p>
+            <div class="lang-options">
+                <button class="lang-btn" onclick="setLanguage('ar')"> العربية</button>
+                <button class="lang-btn" onclick="setLanguage('en')"> English</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- شريط التنقل مع زر اللغة -->
+        <nav class="navbar" aria-label="الرئيسية">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div class="logo">3laa.2007</div>
+                <button class="lang-switch-btn" onclick="showLanguageModal()" aria-label="تغيير اللغة">
+                    <i class="fas fa-globe"></i>
+                </button>
+            </div>
+            <div class="nav-links">
+                <a href="#about" id="navAbout" aria-current="page">عنّي</a>
+                <a href="#projects" id="navProjects">مشاريعي</a>
+                <a href="#skills" id="navSkills">مهاراتي</a>
+                <a href="#contact" id="navContact">تواصل</a>
+            </div>
+        </nav>
+<!-- قسم البطل -->
+<section class="hero" aria-label="مقدمة">
+    <div class="hero-content">
+        <h1 id="heroTitle">عـلاء<br>EDITOR | Developer</h1>
+        <p id="heroDesc">مطور بمجال تطوير الألعاب والتطبيقات التفاعلية | محرر فيديوهات (Editor) | مصمم صور بالفوتوشوب |.</p>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="#projects" class="btn-primary" id="heroBtnProjects"><i class="fas fa-code"></i> مشاريعي</a>
+            <a href="#contact" class="btn-primary" style="background: #f97316; box-shadow: 0 8px 0 #b45309;" id="heroBtnContact"><i class="fas fa-paper-plane"></i> تواصل معي</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <!-- صورة شخصية -->
+        <img src="https://i.ibb.co/0jwkF4TL/IMG-041202.jpg" alt="صورة علاء" loading="lazy">
+        <div class="hero-name">علاء</div>
+        <div class="badge"><i class="fas fa-map-marker-alt"></i> <span id="heroBadge">سوريا • 18 سنة</span></div>
+    </div>
+</section>
+
+<!-- من أنا (بمربعات) -->
+<section id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title" data-ar="من أنا؟" data-en="About Me">من أنا؟</h2>
+    <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto;">
+        <div class="feature-card">
+            <i class="fas fa-birthday-cake feature-icon"></i>
+            <h3 data-ar="العمر" data-en="Age">العمر</h3>
+            <p style="font-size: 2rem; font-weight: 900; margin-top: 10px;">18 سنة</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-map-marker-alt feature-icon"></i>
+            <h3 data-ar="البلد" data-en="Country">البلد</h3>
+            <p style="font-size: 2rem; font-weight: 900; margin-top: 10px;" data-ar="سوريا" data-en="Syria">سوريا</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-code feature-icon"></i>
+            <h3 data-ar="مختصر عني" data-en="About Me Short">مختصر عني</h3>
+            <p style="font-size: 1.2rem;" id="aboutShort">مطور (HTML, CSS, JS) • محرر فيديوهات +12k متابع على تيك توك • مصمم فوتوشوب</p>
+        </div>
+    </div>
+</section>
+    <!-- خبراتي واهتماماتي -->
+    <section aria-labelledby="features-title">
+        <h2 id="features-title" class="section-title" data-ar="خبراتي واهتماماتي" data-en="My Expertise">خبراتي واهتماماتي</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-gamepad feature-icon"></i>
+                <h3 data-ar="تطوير الألعاب" data-en="Game Development">تطوير الألعاب</h3>
+                <p id="feature1">أصمم ألعاباً وتطبيقات تفاعلية باستخدام JavaScript | HTML</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-video feature-icon"></i>
+                <h3 data-ar="مونتاج فيديوهات" data-en="Video Editing">مونتاج فيديوهات</h3>
+                <p id="feature2">أمتلك خبرة في تحرير الفيديوهات والصور المصغرة، وأنشر الفيديوهات على تيك توك وانستغرام.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-paint-brush feature-icon"></i>
+                <h3 data-ar="تصميم فوتوشوب" data-en="Photoshop Design">تصميم فوتوشوب</h3>
+                <p id="feature3">أصمم صوراً إبداعية، أغلفة، ومواد دعائية باستخدام Adobe Photoshop.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- المشاريع (مع تمييز لعبة فزورة) -->
+    <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title" data-ar="أبرز مشاريعي" data-en="My Projects">أبرز مشاريعي</h2>
+        
+        <!-- مشروع فزورة مميز -->
+        <div class="featured-project" data-aos="fade-up" style="position: relative;">
+            <a href="#contact" style="position: absolute; top: 20px; right: 20px; background: var(--accent); color: white; padding: 6px 15px; border-radius: 40px; font-size: 1rem; font-weight: 700; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 10; display: flex; align-items: center; gap: 5px; border: 2px solid #ffd700;" id="forSale">
+                <i class="fas fa-tag"></i> للبيع
+            </a>
+            
+            <div class="project-title">🎮 <span id="project1Title">فزورة - اللعبة التفاعلية العائلية</span></div>
+            <p class="project-desc" id="project1Desc">لعبة مسابقات عائلية تنافسية تعتمد على الذكاء والمعرفة العامة. صممت خصيصاً لتجمع العائلة والأصدقاء في جو من التحدي والمتعة.</p>
+            
+            <ul class="features-list">
+                <li><i class="fas fa-users"></i> <span id="feature1_1">فريقان (أول - ثاني)</span></li>
+                <li><i class="fas fa-layer-group"></i> <span id="feature1_2">أكثر من 20 مجال</span></li>
+                <li><i class="fas fa-check-circle"></i> <span id="feature1_3">آلاف الأسئلة</span></li>
+                <li><i class="fas fa-trophy"></i> <span id="feature1_4">نظام النقاط والفائز</span></li>
+                <li><i class="fas fa-mobile-alt"></i> <span id="feature1_5">متوافقة مع الجوال</span></li>
+            </ul>
+            
+            <div style="text-align: center;">
+                <a href="https://alaa777-lang.github.io/I3lan.fzora/" class="btn-primary" target="_blank" rel="noopener noreferrer" id="project1Link">
+                    <i class="fas fa-play"></i> جرب اللعبة الآن
+                </a>
+            </div>
+        </div>
+
+        <!-- باقي المشاريع -->
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-title">🎬 <span id="project2Title">فيديوهات تيك توك</span></div>
+                <p class="project-desc" id="project2Desc">تصاميم فيديوهات قصيرة متنوعة (EDITING) أكثر من 12 ألف متابع</p>
+                <a href="https://tiktok.com/@3laa__777" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i> <span id="project2LinkText">شاهد حسابي</span></a>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-title">🖌️ <span id="project3Title">تصاميم فوتوشوب</span></div>
+                <p class="project-desc" id="project3Desc">مجموعة من التصاميم الشخصية (أغلفة، منشورات، صور إعلانية) أنجزتها باستخدام Photoshop.</p>
+            </div>
+        </div>
+    </section>
+</div> <!-- نهاية container الأولى -->
+<div class="container">
+        <!-- المهارات والإنجازات -->
+        <section id="skills" aria-labelledby="skills-title">
+            <h2 id="skills-title" class="section-title" data-ar="المهارات والإنجازات" data-en="Skills & Achievements">المهارات والإنجازات</h2>
+            
+            <!-- مهارات قابلة للقياس -->
+            <div class="skills-container">
+                <div class="skill-item">
+                    <span class="skill-name">HTML5</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">CSS3</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Photoshop</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name" data-ar="مونتاج" data-en="Editing">مونتاج</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 100%;"></div></div>
+                </div>
+            </div>
+
+            <!-- الإنجازات مع عدادات -->
+            <div class="achievements-list">
+                <div class="achievement-item">
+                    <i class="fab fa-tiktok"></i>
+                    <span><span class="counter" data-target="12000">0</span>+ <span id="achievement1">متابع على تيك توك</span></span>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span id="achievement2">إطلاق لعبة "فزورة" – أول لعبة تفاعلية عائلية</span>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-certificate"></i>
+                    <span><span class="counter" data-target="5">0</span>+ <span id="achievement3">سنوات خبرة في التصميم والمونتاج</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- تابعني على إنستغرام -->
+        <section aria-labelledby="instagram-title">
+            <h2 id="instagram-title" class="section-title" data-ar="تابعني على إنستغرام" data-en="Follow me on Instagram">تابعني على إنستغرام</h2>
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <div class="feature-card" style="padding: 40px;">
+                    <i class="fab fa-instagram" style="font-size: 5rem; color: #f97316; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 15px;">@3laa.2007</h3>
+                    <p style="font-size: 1.3rem; margin-bottom: 30px;" id="instagramDesc">تابعني على انستقرام !</p>
+                    <a href="https://www.instagram.com/3laa.2007" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: #f97316; box-shadow: 0 8px 0 #b45309; border: none;">
+                        <i class="fab fa-instagram"></i> <span id="instagramBtn">زيارة الحساب</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- تابعني على تيك توك -->
+        <section aria-labelledby="tiktok-title">
+            <h2 id="tiktok-title" class="section-title" data-ar="تابعني على تيك توك" data-en="Follow me on TikTok">تابعني على تيك توك</h2>
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <div class="feature-card" style="padding: 40px; background: var(--card-bg-dark); border: 2px solid var(--accent);">
+                    <i class="fab fa-tiktok" style="font-size: 5rem; color: var(--accent); margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 15px; background: linear-gradient(135deg, #38bdf8, #8b5cf6, #d946ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">@3laa__777</h3>
+                    <p style="font-size: 1.3rem; margin-bottom: 30px;" id="tiktokDesc">تابعني على تيك توك (12k متابعين)!</p>
+                    <a href="https://tiktok.com/@3laa__777" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: linear-gradient(145deg, var(--primary), #6366f1); box-shadow: 0 8px 0 var(--primary-dark); border: 2px solid var(--accent);">
+                        <i class="fab fa-tiktok"></i> <span id="tiktokBtn">زيارة الحساب</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- تابعني على سناب شات -->
+        <section aria-labelledby="snapchat-title">
+            <h2 id="snapchat-title" class="section-title" data-ar="تابعني على سناب شات" data-en="Follow me on Snapchat">تابعني على سناب شات</h2>
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <div class="feature-card" style="padding: 40px; background: var(--card-bg-dark); border: 2px solid var(--accent);">
+                    <i class="fab fa-snapchat" style="font-size: 5rem; color: #FFFC00; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 15px; background: linear-gradient(135deg, #38bdf8, #8b5cf6, #d946ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">@alaa</h3>
+                    <p style="font-size: 1.3rem; margin-bottom: 30px;" id="snapDesc">تابعني على سناب شات !</p>
+                    <a href="https://www.snapchat.com/add/alaaswedan28103?share_id=AGvOtpLfyR4&locale=ar-EG" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: #FFFC00; color: black; box-shadow: 0 8px 0 #ccca00; border: 2px solid var(--accent);">
+                        <i class="fab fa-snapchat"></i> <span id="snapBtn">زيارة الحساب</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- تابعني على يوتيوب -->
+        <section aria-labelledby="youtube-title">
+            <h2 id="youtube-title" class="section-title" data-ar="تابعني على يوتيوب" data-en="Follow me on YouTube">تابعني على يوتيوب</h2>
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <div class="feature-card" style="padding: 40px;">
+                    <i class="fab fa-youtube" style="font-size: 5rem; color: #ff0000; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 15px;">@3laa__777</h3>
+                    <p style="font-size: 1.3rem; margin-bottom: 30px;" id="youtubeDesc">تابعني على يوتيوب !</p>
+                    <a href="https://www.youtube.com/@3laa__777" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: #ff0000; box-shadow: 0 8px 0 #b30000; border: none;">
+                        <i class="fab fa-youtube"></i> <span id="youtubeBtn">زيارة القناة</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- التواصل -->
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title" class="section-title" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</h2>
+            
+            <!-- حسابات التواصل -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/3laa.2007" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="إنستغرام">
+                    <i class="fab fa-instagram"></i> <span id="socialInsta">إنستغرام</span>
+                </a>
+                <a href="https://tiktok.com/@3laa__777" target="_blank" rel="noopener noreferrer" class="social-link tiktok" aria-label="تيك توك">
+                    <i class="fab fa-tiktok"></i> <span id="socialTiktok">تيك توك (12k)</span>
+                </a>
+            </div>
+
+            <!-- نموذج تواصل -->
+            <form class="contact-form" action="https://formspree.io/f/your-endpoint" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" id="inputName" placeholder="الاسم" required aria-label="الاسم">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="inputEmail" placeholder="البريد الإلكتروني" required aria-label="البريد">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" id="inputMessage" placeholder="رسالتك..." required aria-label="الرسالة"></textarea>
+                </div>
+                <button type="submit" id="submitBtn">إرسال الرسالة <i class="fas fa-paper-plane"></i></button>
+            </form>
+
+            <!-- البريد الإلكتروني -->
+            <div class="email-container">
+                <i class="fas fa-envelope"></i>
+                <span>laaswe00@gmail.com</span>
+            </div>
+        </section>
+
+        <!-- تذييل -->
+        <footer class="footer">
+            <p>صنع <i class="fas fa-heart"></i> بواسطة <a href="#about">3laa.2007</a> — 2026</p>
+        </footer>
+    </div>
+
+    <!-- السكريبتات -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script>
+        // بيانات الترجمة
+        const translations = {
+            ar: {
+                // يمكنك إضافة جميع النصوص هنا، لكننا سنعتمد على data-ar و data-en في العناصر
+            },
+            en: {
+                // سيتم التعامل معها عبر toggle
+            }
+        };
+
+// دالة لإظهار نافذة اختيار اللغة
+function showLanguageModal() {
+    document.getElementById('langModal').classList.remove('closed');
+}
+        // تعيين اللغة
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    localStorage.setItem('preferredLanguage', lang);
+    document.getElementById('langModal').classList.add('closed');
+    updateContent(lang);
+}
+
+        // تحديث المحتوى بناءً على اللغة
+        function updateContent(lang) {
+            // تحديث كل العناصر التي تحمل data-ar و data-en
+            document.querySelectorAll('[data-ar]').forEach(el => {
+                if (lang === 'ar') {
+                    el.textContent = el.getAttribute('data-ar');
+                } else {
+                    el.textContent = el.getAttribute('data-en');
+                }
+            });
+
+            // تحديث الـ placeholder للنموذج
+            if (lang === 'ar') {
+                document.getElementById('inputName').placeholder = 'الاسم';
+                document.getElementById('inputEmail').placeholder = 'البريد الإلكتروني';
+                document.getElementById('inputMessage').placeholder = 'رسالتك...';
+                document.getElementById('submitBtn').innerHTML = 'إرسال الرسالة <i class="fas fa-paper-plane"></i>';
+                document.getElementById('themeText').textContent = 'الوضع النهاري / الليلي';
+                document.getElementById('navAbout').textContent = 'عنّي';
+                document.getElementById('navProjects').textContent = 'مشاريعي';
+                document.getElementById('navSkills').textContent = 'مهاراتي';
+                document.getElementById('navContact').textContent = 'تواصل';
+                document.getElementById('heroTitle').innerHTML = 'عـلاء<br>EDITOR | Developer';
+                document.getElementById('heroDesc').textContent = 'مطور بمجال تطوير الألعاب والتطبيقات التفاعلية | محرر فيديوهات (Editor) | مصمم صور بالفوتوشوب |.';
+                document.getElementById('heroBtnProjects').innerHTML = '<i class="fas fa-code"></i> مشاريعي';
+                document.getElementById('heroBtnContact').innerHTML = '<i class="fas fa-paper-plane"></i> تواصل معي';
+                document.getElementById('heroBadge').textContent = 'سوريا • 18 سنة';
+                document.getElementById('aboutShort').textContent = 'مطور (HTML, CSS, JS) • محرر فيديوهات +12k متابع على تيك توك • مصمم فوتوشوب';
+                document.getElementById('feature1').textContent = 'أصمم ألعاباً وتطبيقات تفاعلية باستخدام JavaScript | HTML';
+                document.getElementById('feature2').textContent = 'أمتلك خبرة في تحرير الفيديوهات والصور المصغرة، وأنشر الفيديوهات على تيك توك وانستغرام.';
+                document.getElementById('feature3').textContent = 'أصمم صوراً إبداعية، أغلفة، ومواد دعائية باستخدام Adobe Photoshop.';
+                document.getElementById('forSale').innerHTML = '<i class="fas fa-tag"></i> للبيع';
+                document.getElementById('project1Title').textContent = 'فزورة - اللعبة التفاعلية العائلية';
+                document.getElementById('project1Desc').textContent = 'لعبة مسابقات عائلية تنافسية تعتمد على الذكاء والمعرفة العامة. صممت خصيصاً لتجمع العائلة والأصدقاء في جو من التحدي والمتعة.';
+                document.getElementById('feature1_1').textContent = 'فريقان (أول - ثاني)';
+                document.getElementById('feature1_2').textContent = 'أكثر من 20 مجال';
+                document.getElementById('feature1_3').textContent = 'آلاف الأسئلة';
+                document.getElementById('feature1_4').textContent = 'نظام النقاط والفائز';
+                document.getElementById('feature1_5').textContent = 'متوافقة مع الجوال';
+                document.getElementById('project1Link').innerHTML = '<i class="fas fa-play"></i> جرب اللعبة الآن';
+                document.getElementById('project2Title').textContent = 'فيديوهات تيك توك';
+                document.getElementById('project2Desc').textContent = 'تصاميم فيديوهات قصيرة متنوعة (EDITING) أكثر من 12 ألف متابع';
+                document.getElementById('project2LinkText').textContent = 'شاهد حسابي';
+                document.getElementById('project3Title').textContent = 'تصاميم فوتوشوب';
+                document.getElementById('project3Desc').textContent = 'مجموعة من التصاميم الشخصية (أغلفة، منشورات، صور إعلانية) أنجزتها باستخدام Photoshop.';
+                document.getElementById('achievement1').textContent = 'متابع على تيك توك';
+                document.getElementById('achievement2').textContent = 'إطلاق لعبة "فزورة" – أول لعبة تفاعلية عائلية';
+                document.getElementById('achievement3').textContent = 'سنوات خبرة في التصميم والمونتاج';
+                document.getElementById('instagramDesc').textContent = 'تابعني على انستقرام !';
+                document.getElementById('instagramBtn').textContent = 'زيارة الحساب';
+                document.getElementById('tiktokDesc').textContent = 'تابعني على تيك توك (12k متابعين)!';
+                document.getElementById('tiktokBtn').textContent = 'زيارة الحساب';
+                document.getElementById('snapDesc').textContent = 'تابعني على سناب شات !';
+                document.getElementById('snapBtn').textContent = 'زيارة الحساب';
+                document.getElementById('youtubeDesc').textContent = 'تابعني على يوتيوب !';
+                document.getElementById('youtubeBtn').textContent = 'زيارة القناة';
+                document.getElementById('socialInsta').textContent = 'إنستغرام';
+                document.getElementById('socialTiktok').textContent = 'تيك توك (12k)';
+                document.getElementById('modalTitle').textContent = '🌐 اختر اللغة';
+                document.getElementById('modalDesc').textContent = 'الرجاء اختيار اللغة المناسبة لك';
+            } else {
+                document.getElementById('inputName').placeholder = 'Name';
+                document.getElementById('inputEmail').placeholder = 'Email';
+                document.getElementById('inputMessage').placeholder = 'Your message...';
+                document.getElementById('submitBtn').innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+                document.getElementById('themeText').textContent = 'Light/Dark Mode';
+                document.getElementById('navAbout').textContent = 'About';
+                document.getElementById('navProjects').textContent = 'Projects';
+                document.getElementById('navSkills').textContent = 'Skills';
+                document.getElementById('navContact').textContent = 'Contact';
+                document.getElementById('heroTitle').innerHTML = 'Alaa<br>EDITOR | Developer';
+                document.getElementById('heroDesc').textContent = 'Developer in game development and interactive applications | Video Editor | Photoshop designer.';
+                document.getElementById('heroBtnProjects').innerHTML = '<i class="fas fa-code"></i> My Projects';
+                document.getElementById('heroBtnContact').innerHTML = '<i class="fas fa-paper-plane"></i> Contact Me';
+                document.getElementById('heroBadge').textContent = 'Syria • 18 years';
+                document.getElementById('aboutShort').textContent = 'Developer (HTML, CSS, JS) • Video Editor +12k followers on TikTok • Photoshop Designer';
+                document.getElementById('feature1').textContent = 'I design games and interactive applications using JavaScript | HTML';
+                document.getElementById('feature2').textContent = 'I have experience in video editing and thumbnails, and I publish videos on TikTok and Instagram.';
+                document.getElementById('feature3').textContent = 'I create creative images, covers, and promotional materials using Adobe Photoshop.';
+                document.getElementById('forSale').innerHTML = '<i class="fas fa-tag"></i> For Sale';
+                document.getElementById('project1Title').textContent = 'Fazorah - Family Interactive Game';
+                document.getElementById('project1Desc').textContent = 'A competitive family quiz game based on intelligence and general knowledge. Designed especially for family and friends gatherings in a fun and challenging atmosphere.';
+                document.getElementById('feature1_1').textContent = 'Two Teams';
+                document.getElementById('feature1_2').textContent = '20+ Categories';
+                document.getElementById('feature1_3').textContent = 'Thousands of Questions';
+                document.getElementById('feature1_4').textContent = 'Points System & Winner';
+                document.getElementById('feature1_5').textContent = 'Mobile Friendly';
+                document.getElementById('project1Link').innerHTML = '<i class="fas fa-play"></i> Try the Game Now';
+                document.getElementById('project2Title').textContent = 'TikTok Videos';
+                document.getElementById('project2Desc').textContent = 'Various short video designs (EDITING) with 12k+ followers';
+                document.getElementById('project2LinkText').textContent = 'View My Account';
+                document.getElementById('project3Title').textContent = 'Photoshop Designs';
+                document.getElementById('project3Desc').textContent = 'A collection of personal designs (covers, posts, promotional images) created using Photoshop.';
+                document.getElementById('achievement1').textContent = 'Followers on TikTok';
+                document.getElementById('achievement2').textContent = 'Launched "Fazorah" game – First family interactive game';
+                document.getElementById('achievement3').textContent = 'Years of experience in design and editing';
+                document.getElementById('instagramDesc').textContent = 'Follow me on Instagram!';
+                document.getElementById('instagramBtn').textContent = 'Visit Profile';
+                document.getElementById('tiktokDesc').textContent = 'Follow me on TikTok (12k followers)!';
+                document.getElementById('tiktokBtn').textContent = 'Visit Profile';
+                document.getElementById('snapDesc').textContent = 'Follow me on Snapchat!';
+                document.getElementById('snapBtn').textContent = 'Visit Profile';
+                document.getElementById('youtubeDesc').textContent = 'Follow me on YouTube!';
+                document.getElementById('youtubeBtn').textContent = 'Visit Channel';
+                document.getElementById('socialInsta').textContent = 'Instagram';
+                document.getElementById('socialTiktok').textContent = 'TikTok (12k)';
+                document.getElementById('modalTitle').textContent = '🌐 Choose Language';
+                document.getElementById('modalDesc').textContent = 'Please select your preferred language';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({ duration: 800, once: true });
+    
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        setLanguage(savedLang);
+    } else {
+        // اختياري: تعيين اللغة العربية كلغة افتراضية بدون ظهور النافذة
+        setLanguage('ar'); // يمكنك حذف هذا السطر إذا أردت أن تظل الصفحة بدون لغة حتى يضغط المستخدم على الزر
+    }
+
+    // تمرير سلس للروابط الداخلية
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // شريط تقدم القراءة
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // زر العودة للأعلى
+    const scrollBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollBtn.style.display = 'block';
+        } else {
+            scrollBtn.style.display = 'none';
+        }
+    });
+    scrollBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // عدادات الأرقام (تتحرك عند الظهور)
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    const startCounters = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            }
+        });
+    };
+    const observer = new IntersectionObserver(startCounters, { threshold: 0.5 });
+    counters.forEach(counter => observer.observe(counter));
+});
+    </script>
+
+    <!-- Fallback Fontawesome -->
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </noscript>
+</body>
+</html>
